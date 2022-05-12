@@ -1,3 +1,9 @@
+import pandas
+import streamlit
+import snowflake.connector
+from urllib.error import URLError
+
+
 # New section
 streamlit.header('Fruityvice Fruit Advice!')
 
