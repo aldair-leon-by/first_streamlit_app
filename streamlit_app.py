@@ -1,10 +1,12 @@
 import pandas
 import streamlit
-import snowflake.connector
+
 from urllib.error import URLError
 import requests
 
+from snowflake import connector
 connector.paramstyle='qmark'
+
 
 # New section
 streamlit.header('Fruityvice Fruit Advice!')
