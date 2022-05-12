@@ -4,6 +4,7 @@ import snowflake.connector
 from urllib.error import URLError
 import requests
 
+connector.paramstyle='qmark'
 
 # New section
 streamlit.header('Fruityvice Fruit Advice!')
@@ -36,7 +37,7 @@ if streamlit.button('Get Fruit Load List'):
 def insert_row_snowflake(new_fruit):
     with my_cnx.cursor() as my_cur:
         query = 'insert into fruit_load_list FRUIT_NAME values (?)'
-        my_cur.execute(query,new_fruit )
+        my_cur.execute(query,new_fruit)
         return "Thanks for adding " + new_fruit
 add_my_fruit = streamlit.text_input('What fruit would you like to add?','Kiwi')
 
